@@ -50,13 +50,6 @@ grains: [
   "waffle strips",
 ]}
 
-
-/**
- * Get random value in range
- * @param {number} min - minimum value
- * @param {number} max - maximum value
- * @return {number} random value >= min and <= max
- */
 const random = (min, max) => min + Math.floor(Math.random() * (max - min));
 
 const getProtein = () => foodItems.proteins[random(0, foodItems.proteins.length - 1)]
@@ -67,7 +60,6 @@ const getAdditionalFoodItems = () => {
   const choices = []
   const groups = ["fruits", "veggies", "grains"]
   const count = getRandomNumberOfFoodItems()
-  console.log("Loop count: ", count)
 
   for (let i = 0; i < count; i++) {
     const foodGroup = groups[random(0, groups.length - 1)]
