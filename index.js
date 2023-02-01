@@ -134,7 +134,7 @@ const generateCsvSnackList = () => {
     csvData += "\n"
   }
 
-  writeFile(`${process.env.DESTINATION_PATH}/${snackList.csv}`, csvData, (err) => {
+  writeFile(`${process.cwd()}/${snackList.csv}`, csvData, (err) => {
     if (err) {
       console.log(error)
     }
