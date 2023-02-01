@@ -134,7 +134,7 @@ const generateCsvSnackList = () => {
     csvData += "\n"
   }
 
-  writeFile("C:/Users/dan_b/OneDrive/Documents/snackList.csv", csvData, (err) => {
+  writeFile(`${process.env.DESTINATION_PATH}/${snackList.csv}`, csvData, (err) => {
     if (err) {
       console.log(error)
     }
